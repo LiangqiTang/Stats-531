@@ -117,6 +117,7 @@
 \newcommand\mysolution{{\bf Solution}. }
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 % knitr set up
 <<knitr_opts,include=FALSE,cache=FALSE,purl=FALSE,child="../setup.Rnw">>=
