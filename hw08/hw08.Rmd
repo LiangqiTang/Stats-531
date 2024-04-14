@@ -1,0 +1,210 @@
+---
+title: "Homework 8"
+author: "DATASCI/STATS 531, Liangqi Tang"
+format: 
+  html:
+    toc: TRUE
+    toc-depth: 5
+    code-fold: TRUE
+    code-summary: "Code"
+    code-tools: TRUE
+    embed-resources: TRUE
+---
+
+For this Homework, I didn't collaborate with my final project group. All my solutions are based on my understanding of the slides and previous homework. Also I have referred to some resources which will be cited in the content and listed in the end of the report.
+
+# Question 1.
+
+**Answer**:
+
+C. Firstly, the measurement times `time(po)` do not need to be in units of weeks. Since in Homework we set them to be weeks 1,2,... but this should still work if the time is days, months or years. It can also be 1/52, 2/52, ..., 2. What matters here is that the time interval should be the same which will match our "time step" *dt* in the model. Thus we can exclude options A and B. Besides, the time units must be match between measurement times and latent times since our [pomp theory](https://ionides.github.io/531w24/10/slides.pdf) is based on this setting, i.e. $y_t$ is a measurement of the latent process $x_t$. If $t$ between $x$'s and $y$'s do not match, it will not make any sense. Thus we can exclude options D and E.
+
+****
+
+# Question 2.
+
+**Answer**:
+
+E. For this question, I followed the basic debug process and input the error message in Google but I can't seem to find anything useful. So I just try to follow the errors in options and change the codes in my Homework6 until I find the similar error message: Here I miss the semicolon at the end of `I = 1` in `seir_rinit` on purpose.
+
+```{r, message = FALSE ,error = TRUE}
+library(pomp)
+
+readr::read_csv("https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv") |>
+  dplyr::select(week,reports=cases) -> meas
+
+# step function: E is similar to the component I, add E in the chain
+seir_step <- Csnippet("
+  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));
+  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));
+  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));
+  S -= dN_SE;
+  E += dN_SE - dN_EI;
+  I += dN_EI - dN_IR;
+  R += dN_IR;
+  H += dN_IR;
+")
+
+# initial function: suppose we do not no the latent value of E at first.
+seir_rinit <- Csnippet("
+  S = nearbyint(eta*N);
+  E = 0; 
+  I = 1
+  R = nearbyint((1-eta)*N);
+  H = 0;
+")
+
+# dmeasure component
+seir_dmeas <- Csnippet("
+  lik = dnbinom_mu(reports,k,rho*H,give_log);
+")
+
+# rmeasure component
+seir_rmeas <- Csnippet("
+  reports = rnbinom_mu(k,rho*H);
+")
+
+
+# add components to pomp model: clarify E and mu_EI
+meas |>
+  pomp(times="week",t0=0,
+    rprocess=euler(seir_step,delta.t=1/7),
+    rinit=seir_rinit,
+    rmeasure=seir_rmeas,
+    dmeasure=seir_dmeas,
+    accumvars="H",
+    statenames=c("S","E","I","R","H"),
+    paramnames=c("Beta","mu_EI","mu_IR","N","eta","rho","k")
+  ) -> measSEIR
+```
+
+****
+
+# Question 3
+
+**Answer**:
+
+B. Similar to Question 2. I try out errors in the options: I delete the `eta` in `paramnames` on purpose and got the similar error message.
+
+```{r, message = FALSE ,error = TRUE}
+library(pomp)
+
+readr::read_csv("https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv") |>
+  dplyr::select(week,reports=cases) -> meas
+
+# step function: E is similar to the component I, add E in the chain
+seir_step <- Csnippet("
+  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));
+  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));
+  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));
+  S -= dN_SE;
+  E += dN_SE - dN_EI;
+  I += dN_EI - dN_IR;
+  R += dN_IR;
+  H += dN_IR;
+")
+
+# initial function: suppose we do not no the latent value of E at first.
+seir_rinit <- Csnippet("
+  S = nearbyint(eta*N);
+  E = 0; 
+  I = 1;
+  R = nearbyint((1-eta)*N);
+  H = 0;
+")
+
+# dmeasure component
+seir_dmeas <- Csnippet("
+  lik = dnbinom_mu(reports,k,rho*H,give_log);
+")
+
+# rmeasure component
+seir_rmeas <- Csnippet("
+  reports = rnbinom_mu(k,rho*H);
+")
+
+
+# add components to pomp model: clarify E and mu_EI
+meas |>
+  pomp(times="week",t0=0,
+    rprocess=euler(seir_step,delta.t=1/7),
+    rinit=seir_rinit,
+    rmeasure=seir_rmeas,
+    dmeasure=seir_dmeas,
+    accumvars="H",
+    statenames=c("S","E","I","R","H"),
+    paramnames=c("Beta","mu_EI","mu_IR","N","rho","k")
+  ) -> measSEIR
+```
+
+****
+
+# Question 4
+
+**Answer**
+
+A. Similar to Question 2 and 3. I try out errors in the options: 
+
+```{r, message = FALSE ,error = TRUE}
+library(pomp)
+
+readr::read_csv("https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv") |>
+  dplyr::select(week,reports=cases) -> meas
+
+# step function: E is similar to the component I, add E in the chain
+seir_step <- Csnippet("
+  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));
+  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));
+  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));
+  S -= dN_SE;
+  E += dN_SE - dN_EI;
+  I += dN_EI - dN_IR;
+  R += dN_IR;
+  H += dN_IR;
+")
+
+# initial function: suppose we do not no the latent value of E at first.
+seir_rinit <- Csnippet("
+  S = nearbyint(eta*N);
+  E = 0; 
+  I = 1;
+  R = nearbyint((1-eta)*N);
+  H = 0;
+")
+
+# dmeasure component
+seir_dmeas <- Csnippet("
+  lik = dnbinom_mu(reports,k,rho*H,give_log);
+")
+
+# rmeasure component
+seir_rmeas <- Csnippet("
+  double mean, sd;
+  double length;
+  mean = rho*H;
+  sd = H;
+  length = rnorm(1,mean,sd);
+  reports = rnbinom_mu(k,rho*H);
+")
+
+
+# add components to pomp model: clarify E and mu_EI
+meas |>
+  pomp(times="week",t0=0,
+    rprocess=euler(seir_step,delta.t=1/7),
+    rinit=seir_rinit,
+    rmeasure=seir_rmeas,
+    dmeasure=seir_dmeas,
+    accumvars="H",
+    statenames=c("S","E","I","R","H"),
+    paramnames=c("Beta","mu_EI","mu_IR","N","eta","rho","k")
+  ) -> measSEIR
+```
+
+****
+
+
+
+# Referene
+
+- 1. [pomp theory](https://ionides.github.io/531w24/10/slides.pdf)
