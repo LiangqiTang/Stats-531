@@ -21,6 +21,8 @@ C. Firstly, the measurement times `time(po)` do not need to be in units of weeks
 
 ****
 
+**(For Question 2,3,4 I referred to the way how [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf) generate the similar error message.)**
+
 # Question 2.
 
 **Answer**:
@@ -143,7 +145,7 @@ meas |>
 
 **Answer**
 
-A. Similar to Question 2 and 3. I try out errors in the options: 
+A. Similar to Question 2 and 3. I try out errors in the options: I used R syntax within a C function that has the same name as an R function in `seir_rmeas`.
 
 ```{r, message = FALSE ,error = TRUE}
 library(pomp)
@@ -203,8 +205,169 @@ meas |>
 
 ****
 
+# Question 5
 
+**Answer**:
+
+B. If $h$ is an indentity map, then $W_n = h(V_n) = V_n$ is a Markov process. If $h$ is a function such that $h(V_n)  = V_n + V_{2n}$. Then $W_n = h(V_n) = V_n + V_{2n}$, $W_{n-1} = h(V_{n-1}) = V_{n-1} + V_{2n-2}$. Then $W_n$ is not Markov process. Thus ii is correct. Since $(X_n, Y_n)$ is a POMP model, $X_n$ is the latent process. Thus $W_n = h(V_n) = X_n$ is Markov Process. Thus iv is correct.
+
+****
+
+# Question 6
+
+**Answer**:
+
+C. For one core:
+
+$$
+10 \times 10^3 = 10^4 = 15 \text{min}
+$$
+Then:
+
+$$
+20 \times 10^4 = 2 \times 10^5 = 20\times 15\text{min} = 300 \text{min}
+$$
+
+Equally distributed on 4 cores:
+
+$$
+300\text{min} /4 = 75 \text{min}
+$$
+
+****
+
+# Question 7
+
+**Answer**:
+
+E. In this question I referred to [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf) on how to compute exact std using codes. We know from [pomp likelihood estimation](https://kingaa.github.io/sbied/pfilter/slides.pdf) that the particle filter can calculate the unbiased likelihood estimate on a natural scale but not on a log scale from the slides. Thus by the codes below:
+
+```{r}
+es <- c(-2446, -2444, -2443, -2442, -2440)
+library(pomp)
+logmeanexp(es, se = TRUE)
+```
+
+E is correct.
+
+****
+
+# Question 8
+
+**Answer**:
+
+A. For this question, use the codes below to read the estimates of loglikelihood and do the same operation as Question 7 using `logmeanexp` in `pomp` package:
+
+```{r}
+Q9 <- readRDS("~/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08/Q9.rds")
+logmeanexp(Q9)
+```
+
+Thus A is correct.
+
+****
+
+# Question 9
+
+**Answer**:
+
+D. According to [likelihood based inference for POMP](https://kingaa.github.io/sbied/pfilter/slides.pdf), if the effective sample size is too small, then the measurement information might be not enough for filtering out the noise in some time slots. This will cause the estimation on several time slots to be not convincing and thus ruin the whole particle filtering algorithm since it's sequential. Thus C is likely to happen. We should choose D.
+
+****
+
+# Question 10
+
+**Answer**:
+
+C. If the likelihood increases steadily, then it's the sign that the estimation algorithm keeps changing the parameters to get better estimation. This means that the estimation keeps improving until a convergence and it still does not make fully use of the data and "dig out" the information in it. This might imply that we misspecified the model and do not fit the data adequately. Thus C is correct.
+
+****
+
+# Question 11
+
+**Answer**:
+
+B. According to the [profile likelihood](https://kingaa.github.io/sbied/mif/slides.pdf), we can apply Wilk's Theorem only if the likelihood is profile, i.e., is the maximization of all the other parameters given one parameter. Thus if the code only involves evaluation of the likelihood but not maximization then it should be wrong.
+
+****
+
+# Question 12
+
+**Answer**:
+
+A: True. Because the profile likelihood is the maximization over every slice.
+
+B: False. Because CI should be read from profile likelihood not slices according to Wilk's Theorem. (Only if we only have 1 parameter thus maximizing on the remaining parameters is just the likelihood itself, B can be True)
+
+C: False.
+
+D: True. Because the poor man's profile is just the "practical" true profile which we can compute using our parameter estimation. It should lie below the true profile.
+
+****
+
+# Question 13
+
+**Answer**:
+
+A. From the plots we can see the likelihood is climbing and all iterations and replicated searches are producing. We can also find that the $\sigma_{\nu}$ and $H_0$ do dot converge, which indicates weak identifability.
+
+****
+
+# Question 14
+
+**Answer**:
+
+E. For this question I referred to the [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf). I think B makes sense since the loglik spread too widely thus we need to increase particles and iterations to achieve better and more stable searching results. For C and D, cite from [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf):
+*However, if the model fit is not great (as revealed by comparison against a benchmark) this makes the filtering harder as well as less scientifically satisfactory. If the model is fitting substantially below ARMA benchmarks, it is worth considering some extra time on model development. Identifying time points with low effective sample size can help to identify which parts of the data are problemtic for the model to explain.*.
+
+****
+
+**(For Question 15 and 16, I finished independently.)**
+
+# Question 15
+
+**Answer**:
+
+A: False. `Nmif = 100`.
+
+B: True. `partrans` transfer "Beta" and "alpha" to log scale.
+
+C: False. `rw.sd` defines "gamma" as the standard deviation of a random walk.
+
+D: True. "delta" will remain fixed since only "Beta", "alpha", "gamma" appears in `rw.sd``.
+
+E: False.
+
+F: True. Since the cooling fraction should be 0.1 every 50 Nmif but not every 1 Nmif.
+
+H: True.
+
+****
+
+# Question 16
+
+**Answer**:
+
+A: True, `Nmif = 100` will be preserved and be default.
+
+B: True, we only re-define `rw.sd` and `cooling.fraction.50`, thus all the other codes will be re-used.
+
+C: True. The new interations will be continued at the end of the old ones.
+
+D: True. Preserved in Question 15.
+
+E: True. Because "gamma" is not defined in the new `rw.sd`.
+
+F: True. Preserved in Question 15.
+
+G: False. Since $0.2^{100/50} = 0.04 > 0.01 = 0.1^{100/50}$.
+
+****
 
 # Referene
 
 - 1. [pomp theory](https://ionides.github.io/531w24/10/slides.pdf)
+- 2. [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf)
+- 3. [pomp likelihood estimation](https://kingaa.github.io/sbied/pfilter/slides.pdf)
+- 4. [likelihood based inference for POMP](https://kingaa.github.io/sbied/pfilter/slides.pdf)
+- 5. [profile likelihood](https://kingaa.github.io/sbied/mif/slides.pdf)

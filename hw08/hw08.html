@@ -3140,6 +3140,18 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
   <li><a href="#question-2." id="toc-question-2." class="nav-link" data-scroll-target="#question-2.">Question 2.</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11">Question 11</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12">Question 12</a></li>
+  <li><a href="#question-13" id="toc-question-13" class="nav-link" data-scroll-target="#question-13">Question 13</a></li>
+  <li><a href="#question-14" id="toc-question-14" class="nav-link" data-scroll-target="#question-14">Question 14</a></li>
+  <li><a href="#question-15" id="toc-question-15" class="nav-link" data-scroll-target="#question-15">Question 15</a></li>
+  <li><a href="#question-16" id="toc-question-16" class="nav-link" data-scroll-target="#question-16">Question 16</a></li>
   <li><a href="#referene" id="toc-referene" class="nav-link" data-scroll-target="#referene">Referene</a></li>
   </ul>
 </nav>
@@ -3175,6 +3187,7 @@ return!"\t\n\x0B\f\r                　\u2028\u2029
 <p><strong>Answer</strong>:</p>
 <p>C. Firstly, the measurement times <code>time(po)</code> do not need to be in units of weeks. Since in Homework we set them to be weeks 1,2,… but this should still work if the time is days, months or years. It can also be 1/52, 2/52, …, 2. What matters here is that the time interval should be the same which will match our “time step” <em>dt</em> in the model. Thus we can exclude options A and B. Besides, the time units must be match between measurement times and latent times since our <a href="https://ionides.github.io/531w24/10/slides.pdf">pomp theory</a> is based on this setting, i.e. <span class="math inline">\(y_t\)</span> is a measurement of the latent process <span class="math inline">\(x_t\)</span>. If <span class="math inline">\(t\)</span> between <span class="math inline">\(x\)</span>’s and <span class="math inline">\(y\)</span>’s do not match, it will not make any sense. Thus we can exclude options D and E.</p>
 <hr>
+<p><strong>(For Question 2,3,4 I referred to the way how <a href="https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf">previous solutions</a> generate the similar error message.)</strong></p>
 </section>
 <section id="question-2." class="level1">
 <h1>Question 2.</h1>
@@ -3239,24 +3252,24 @@ running command
 -I&#39;/Users/liangqi/Library/Mobile
 Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;&quot;
 &#39;/Library/Frameworks/R.framework/Resources/bin/R&#39; CMD SHLIB -c -o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.so
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.c
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.so
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.c
 2&gt;&amp;1&#39; had status 1</code></pre>
 </div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.so&#39;: status = 1
+<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.so&#39;: status = 1
 compiler messages:
 using C compiler: ‘Apple clang version 15.0.0 (clang-1500.3.9.4)’
 using SDK: ‘’
-clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.c:33:3: error: called object type &#39;int&#39; is not a function or function pointer
+clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.o
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.c:33:3: error: called object type &#39;int&#39; is not a function or function pointer
   R = nearbyint((1-eta)*N);
   ^
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.c:24:11: note: expanded from macro &#39;R&#39;
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.c:24:11: note: expanded from macro &#39;R&#39;
 #define R (__x[__stateindex[3]])
           ^
 1 error generated.
-make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_d6468cc0b58335caa7af7dd70a7d99d2.o] Error 1</code></pre>
+make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_cc384fbdd60f35d0b261e0b707cb6dbd.o] Error 1</code></pre>
 </div>
 </div>
 <hr>
@@ -3324,24 +3337,24 @@ running command
 -I&#39;/Users/liangqi/Library/Mobile
 Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;&quot;
 &#39;/Library/Frameworks/R.framework/Resources/bin/R&#39; CMD SHLIB -c -o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.so
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.c
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.so
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.c
 2&gt;&amp;1&#39; had status 1</code></pre>
 </div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.so&#39;: status = 1
+<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.so&#39;: status = 1
 compiler messages:
 using C compiler: ‘Apple clang version 15.0.0 (clang-1500.3.9.4)’
 using SDK: ‘’
-clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.c:29:17: error: use of undeclared identifier &#39;eta&#39;
+clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.o
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.c:29:17: error: use of undeclared identifier &#39;eta&#39;
   S = nearbyint(eta*N);
                 ^
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.c:32:20: error: use of undeclared identifier &#39;eta&#39;
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.c:32:20: error: use of undeclared identifier &#39;eta&#39;
   R = nearbyint((1-eta)*N);
                    ^
 2 errors generated.
-make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_dfaa5a183298f919db79f6c68da2c94a.o] Error 1</code></pre>
+make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_6253ffd186dc70157b4a009436cde1d8.o] Error 1</code></pre>
 </div>
 </div>
 <hr>
@@ -3349,7 +3362,7 @@ make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pom
 <section id="question-4" class="level1">
 <h1>Question 4</h1>
 <p><strong>Answer</strong></p>
-<p>A. Similar to Question 2 and 3. I try out errors in the options:</p>
+<p>A. Similar to Question 2 and 3. I try out errors in the options: I used R syntax within a C function that has the same name as an R function in <code>seir_rmeas</code>.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -3414,17 +3427,17 @@ running command
 -I&#39;/Users/liangqi/Library/Mobile
 Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;&quot;
 &#39;/Library/Frameworks/R.framework/Resources/bin/R&#39; CMD SHLIB -c -o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.so
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.c
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.so
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.c
 2&gt;&amp;1&#39; had status 1</code></pre>
 </div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.so&#39;: status = 1
+<pre><code>Error: error in building shared-object library from C snippets: in &#39;Cbuilder&#39;: compilation error: cannot compile shared-object library &#39;/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.so&#39;: status = 1
 compiler messages:
 using C compiler: ‘Apple clang version 15.0.0 (clang-1500.3.9.4)’
 using SDK: ‘’
-clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.o
-/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.c:118:25: error: too many arguments to function call, expected 2, have 3
+clang -arch arm64 -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG -I&#39;/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library/pomp/include&#39; -I&#39;/Users/liangqi/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08&#39;  -I/opt/R/arm64/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.c -o /var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.o
+/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.c:118:25: error: too many arguments to function call, expected 2, have 3
   length = rnorm(1,mean,sd);
            ~~~~~        ^~
 /Library/Frameworks/R.framework/Resources/include/Rmath.h:375:8: note: &#39;Rf_rnorm&#39; declared here
@@ -3434,9 +3447,131 @@ double  rnorm(double, double);
 #define rnorm           Rf_rnorm
                         ^
 1 error generated.
-make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pomp_39c723d8ad8ee4d3a21f0c0360653393.o] Error 1</code></pre>
+make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//RtmpgVydyR/9739/pomp_894d344adf70d0754423b2d45e4930aa.o] Error 1</code></pre>
 </div>
 </div>
+<hr>
+</section>
+<section id="question-5" class="level1">
+<h1>Question 5</h1>
+<p><strong>Answer</strong>:</p>
+<p>B. If <span class="math inline">\(h\)</span> is an indentity map, then <span class="math inline">\(W_n = h(V_n) = V_n\)</span> is a Markov process. If <span class="math inline">\(h\)</span> is a function such that <span class="math inline">\(h(V_n) = V_n + V_{2n}\)</span>. Then <span class="math inline">\(W_n = h(V_n) = V_n + V_{2n}\)</span>, <span class="math inline">\(W_{n-1} = h(V_{n-1}) = V_{n-1} + V_{2n-2}\)</span>. Then <span class="math inline">\(W_n\)</span> is not Markov process. Thus ii is correct. Since <span class="math inline">\((X_n, Y_n)\)</span> is a POMP model, <span class="math inline">\(X_n\)</span> is the latent process. Thus <span class="math inline">\(W_n = h(V_n) = X_n\)</span> is Markov Process. Thus iv is correct.</p>
+<hr>
+</section>
+<section id="question-6" class="level1">
+<h1>Question 6</h1>
+<p><strong>Answer</strong>:</p>
+<p>C. For one core:</p>
+<p><span class="math display">\[
+10 \times 10^3 = 10^4 = 15 \text{min}
+\]</span> Then:</p>
+<p><span class="math display">\[
+20 \times 10^4 = 2 \times 10^5 = 20\times 15\text{min} = 300 \text{min}
+\]</span></p>
+<p>Equally distributed on 4 cores:</p>
+<p><span class="math display">\[
+300\text{min} /4 = 75 \text{min}
+\]</span></p>
+<hr>
+</section>
+<section id="question-7" class="level1">
+<h1>Question 7</h1>
+<p><strong>Answer</strong>:</p>
+<p>E. In this question I referred to <a href="https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf">previous solutions</a> on how to compute exact std using codes. We know from <a href="https://kingaa.github.io/sbied/pfilter/slides.pdf">pomp likelihood estimation</a> that the particle filter can calculate the unbiased likelihood estimate on a natural scale but not on a log scale from the slides. Thus by the codes below:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>es <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2446</span>, <span class="sc">-</span><span class="dv">2444</span>, <span class="sc">-</span><span class="dv">2443</span>, <span class="sc">-</span><span class="dv">2442</span>, <span class="sc">-</span><span class="dv">2440</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">logmeanexp</span>(es, <span class="at">se =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         est           se 
+-2441.422198     1.380688 </code></pre>
+</div>
+</div>
+<p>E is correct.</p>
+<hr>
+</section>
+<section id="question-8" class="level1">
+<h1>Question 8</h1>
+<p><strong>Answer</strong>:</p>
+<p>A. For this question, use the codes below to read the estimates of loglikelihood and do the same operation as Question 7 using <code>logmeanexp</code> in <code>pomp</code> package:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Q9 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;~/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08/Q9.rds&quot;</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">logmeanexp</span>(Q9)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -3764.163</code></pre>
+</div>
+</div>
+<p>Thus A is correct.</p>
+<hr>
+</section>
+<section id="question-9" class="level1">
+<h1>Question 9</h1>
+<p><strong>Answer</strong>:</p>
+<p>D. According to <a href="https://kingaa.github.io/sbied/pfilter/slides.pdf">likelihood based inference for POMP</a>, if the effective sample size is too small, then the measurement information might be not enough for filtering out the noise in some time slots. This will cause the estimation on several time slots to be not convincing and thus ruin the whole particle filtering algorithm since it’s sequential. Thus C is likely to happen. We should choose D.</p>
+<hr>
+</section>
+<section id="question-10" class="level1">
+<h1>Question 10</h1>
+<p><strong>Answer</strong>:</p>
+<p>C. If the likelihood increases steadily, then it’s the sign that the estimation algorithm keeps changing the parameters to get better estimation. This means that the estimation keeps improving until a convergence and it still does not make fully use of the data and “dig out” the information in it. This might imply that we misspecified the model and do not fit the data adequately. Thus C is correct.</p>
+<hr>
+</section>
+<section id="question-11" class="level1">
+<h1>Question 11</h1>
+<p><strong>Answer</strong>:</p>
+<p>B. According to the <a href="https://kingaa.github.io/sbied/mif/slides.pdf">profile likelihood</a>, we can apply Wilk’s Theorem only if the likelihood is profile, i.e., is the maximization of all the other parameters given one parameter. Thus if the code only involves evaluation of the likelihood but not maximization then it should be wrong.</p>
+<hr>
+</section>
+<section id="question-12" class="level1">
+<h1>Question 12</h1>
+<p><strong>Answer</strong>:</p>
+<p>A: True. Because the profile likelihood is the maximization over every slice.</p>
+<p>B: False. Because CI should be read from profile likelihood not slices according to Wilk’s Theorem. (Only if we only have 1 parameter thus maximizing on the remaining parameters is just the likelihood itself, B can be True)</p>
+<p>C: False.</p>
+<p>D: True. Because the poor man’s profile is just the “practical” true profile which we can compute using our parameter estimation. It should lie below the true profile.</p>
+<hr>
+</section>
+<section id="question-13" class="level1">
+<h1>Question 13</h1>
+<p><strong>Answer</strong>:</p>
+<p>A. From the plots we can see the likelihood is climbing and all iterations and replicated searches are producing. We can also find that the <span class="math inline">\(\sigma_{\nu}\)</span> and <span class="math inline">\(H_0\)</span> do dot converge, which indicates weak identifability.</p>
+<hr>
+</section>
+<section id="question-14" class="level1">
+<h1>Question 14</h1>
+<p><strong>Answer</strong>:</p>
+<p>E. For this question I referred to the <a href="https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf">previous solutions</a>. I think B makes sense since the loglik spread too widely thus we need to increase particles and iterations to achieve better and more stable searching results. For C and D, cite from <a href="https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf">previous solutions</a>: <em>However, if the model fit is not great (as revealed by comparison against a benchmark) this makes the filtering harder as well as less scientifically satisfactory. If the model is fitting substantially below ARMA benchmarks, it is worth considering some extra time on model development. Identifying time points with low effective sample size can help to identify which parts of the data are problemtic for the model to explain.</em>.</p>
+<hr>
+<p><strong>(For Question 15 and 16, I finished independently.)</strong></p>
+</section>
+<section id="question-15" class="level1">
+<h1>Question 15</h1>
+<p><strong>Answer</strong>:</p>
+<p>A: False. <code>Nmif = 100</code>.</p>
+<p>B: True. <code>partrans</code> transfer “Beta” and “alpha” to log scale.</p>
+<p>C: False. <code>rw.sd</code> defines “gamma” as the standard deviation of a random walk.</p>
+<p>D: True. “delta” will remain fixed since only “Beta”, “alpha”, “gamma” appears in `rw.sd``.</p>
+<p>E: False.</p>
+<p>F: True. Since the cooling fraction should be 0.1 every 50 Nmif but not every 1 Nmif.</p>
+<p>H: True.</p>
+<hr>
+</section>
+<section id="question-16" class="level1">
+<h1>Question 16</h1>
+<p><strong>Answer</strong>:</p>
+<p>A: True, <code>Nmif = 100</code> will be preserved and be default.</p>
+<p>B: True, we only re-define <code>rw.sd</code> and <code>cooling.fraction.50</code>, thus all the other codes will be re-used.</p>
+<p>C: True. The new interations will be continued at the end of the old ones.</p>
+<p>D: True. Preserved in Question 15.</p>
+<p>E: True. Because “gamma” is not defined in the new <code>rw.sd</code>.</p>
+<p>F: True. Preserved in Question 15.</p>
+<p>G: False. Since <span class="math inline">\(0.2^{100/50} = 0.04 &gt; 0.01 = 0.1^{100/50}\)</span>.</p>
 <hr>
 </section>
 <section id="referene" class="level1">
@@ -3444,6 +3579,18 @@ make: *** [/var/folders/1m/g_2xpnh912g613fymwqbt4gr0000gn/T//Rtmphfw9ts/8180/pom
 <ul>
 <li><ol type="1">
 <li><a href="https://ionides.github.io/531w24/10/slides.pdf">pomp theory</a></li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><a href="https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf">previous solutions</a></li>
+</ol></li>
+<li><ol start="3" type="1">
+<li><a href="https://kingaa.github.io/sbied/pfilter/slides.pdf">pomp likelihood estimation</a></li>
+</ol></li>
+<li><ol start="4" type="1">
+<li><a href="https://kingaa.github.io/sbied/pfilter/slides.pdf">likelihood based inference for POMP</a></li>
+</ol></li>
+<li><ol start="5" type="1">
+<li><a href="https://kingaa.github.io/sbied/mif/slides.pdf">profile likelihood</a></li>
 </ol></li>
 </ul>
 <!-- -->
@@ -3736,216 +3883,380 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Homework 8&quot;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;DATASCI/STATS 531, Liangqi Tang&quot;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: TRUE</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 5</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: TRUE</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-summary: &quot;Code&quot;</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: TRUE</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: TRUE</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>For this Homework, I didn&#39;t collaborate with my final project group. All my solutions are based on my understanding of the slides and previous homework. Also I have referred to some resources which will be cited in the content and listed in the end of the report.</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 1.</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>C. Firstly, the measurement times <span class="in">`time(po)`</span> do not need to be in units of weeks. Since in Homework we set them to be weeks 1,2,... but this should still work if the time is days, months or years. It can also be 1/52, 2/52, ..., 2. What matters here is that the time interval should be the same which will match our &quot;time step&quot; *dt* in the model. Thus we can exclude options A and B. Besides, the time units must be match between measurement times and latent times since our <span class="co">[</span><span class="ot">pomp theory</span><span class="co">](https://ionides.github.io/531w24/10/slides.pdf)</span> is based on this setting, i.e. $y_t$ is a measurement of the latent process $x_t$. If $t$ between $x$&#39;s and $y$&#39;s do not match, it will not make any sense. Thus we can exclude options D and E.</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>****</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 2.</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>E. For this question, I followed the basic debug process and input the error message in Google but I can&#39;t seem to find anything useful. So I just try to follow the errors in options and change the codes in my Homework6 until I find the similar error message: Here I miss the semicolon at the end of <span class="in">`I = 1`</span> in <span class="in">`seir_rinit`</span> on purpose.</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
-<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
-<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
-<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
-<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
-<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;eta&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
-<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>****</span>
-<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 3</span></span>
-<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
-<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>B. Similar to Question 2. I try out errors in the options: I delete the <span class="in">`eta`</span> in <span class="in">`paramnames`</span> on purpose and got the similar error message.</span>
-<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
-<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
-<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
-<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
-<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
-<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
-<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
-<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
-<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
-<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
-<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
-<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
-<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
-<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
-<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1;</span></span>
-<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
-<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
-<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
-<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
-<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
-<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
-<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
-<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
-<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
-<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
-<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
-<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
-<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
-<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
-<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
-<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
-<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>****</span>
-<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 4</span></span>
-<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a>**Answer**</span>
-<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>A. Similar to Question 2 and 3. I try out errors in the options: </span>
-<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
-<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
-<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
-<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
-<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
-<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
-<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
-<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
-<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
-<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
-<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
-<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
-<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
-<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
-<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
-<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1;</span></span>
-<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
-<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
-<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
-<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
-<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
-<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
-<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a><span class="st">  double mean, sd;</span></span>
-<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a><span class="st">  double length;</span></span>
-<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a><span class="st">  mean = rho*H;</span></span>
-<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a><span class="st">  sd = H;</span></span>
-<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a><span class="st">  length = rnorm(1,mean,sd);</span></span>
-<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
-<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
-<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
-<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
-<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
-<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
-<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
-<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
-<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
-<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
-<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;eta&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
-<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
-<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a>****</span>
-<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a><span class="fu"># Referene</span></span>
-<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1. <span class="co">[</span><span class="ot">pomp theory</span><span class="co">](https://ionides.github.io/531w24/10/slides.pdf)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Homework 8&quot;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;DATASCI/STATS 531, Liangqi Tang&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: TRUE</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 5</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: TRUE</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-summary: &quot;Code&quot;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: TRUE</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">    embed-resources: TRUE</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>For this Homework, I didn&#39;t collaborate with my final project group. All my solutions are based on my understanding of the slides and previous homework. Also I have referred to some resources which will be cited in the content and listed in the end of the report.</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 1.</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>C. Firstly, the measurement times <span class="in">`time(po)`</span> do not need to be in units of weeks. Since in Homework we set them to be weeks 1,2,... but this should still work if the time is days, months or years. It can also be 1/52, 2/52, ..., 2. What matters here is that the time interval should be the same which will match our &quot;time step&quot; *dt* in the model. Thus we can exclude options A and B. Besides, the time units must be match between measurement times and latent times since our <span class="co">[</span><span class="ot">pomp theory</span><span class="co">](https://ionides.github.io/531w24/10/slides.pdf)</span> is based on this setting, i.e. $y_t$ is a measurement of the latent process $x_t$. If $t$ between $x$&#39;s and $y$&#39;s do not match, it will not make any sense. Thus we can exclude options D and E.</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>**(For Question 2,3,4 I referred to the way how [previous solutions](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf) generate the similar error message.)**</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 2.</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>E. For this question, I followed the basic debug process and input the error message in Google but I can&#39;t seem to find anything useful. So I just try to follow the errors in options and change the codes in my Homework6 until I find the similar error message: Here I miss the semicolon at the end of <span class="in">`I = 1`</span> in <span class="in">`seir_rinit`</span> on purpose.</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1</span></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;eta&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 3</span></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>B. Similar to Question 2. I try out errors in the options: I delete the <span class="in">`eta`</span> in <span class="in">`paramnames`</span> on purpose and got the similar error message.</span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1;</span></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 4</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>**Answer**</span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>A. Similar to Question 2 and 3. I try out errors in the options: I used R syntax within a C function that has the same name as an R function in <span class="in">`seir_rmeas`</span>.</span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message = FALSE ,error = TRUE}</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">&quot;https://kingaa.github.io/sbied/stochsim/Measles_Consett_1948.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(week,<span class="at">reports=</span>cases) <span class="ot">-&gt;</span> meas</span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a><span class="co"># step function: E is similar to the component I, add E in the chain</span></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>seir_step <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_SE = rbinom(S,1-exp(-Beta*I/N*dt));</span></span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_EI = rbinom(E,1-exp(-mu_EI*dt));</span></span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a><span class="st">  double dN_IR = rbinom(I,1-exp(-mu_IR*dt));</span></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="st">  S -= dN_SE;</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a><span class="st">  E += dN_SE - dN_EI;</span></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="st">  I += dN_EI - dN_IR;</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="st">  R += dN_IR;</span></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="st">  H += dN_IR;</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="co"># initial function: suppose we do not no the latent value of E at first.</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a>seir_rinit <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a><span class="st">  S = nearbyint(eta*N);</span></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="st">  E = 0; </span></span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a><span class="st">  I = 1;</span></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a><span class="st">  R = nearbyint((1-eta)*N);</span></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="st">  H = 0;</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="co"># dmeasure component</span></span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a>seir_dmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a><span class="st">  lik = dnbinom_mu(reports,k,rho*H,give_log);</span></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a><span class="co"># rmeasure component</span></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>seir_rmeas <span class="ot">&lt;-</span> <span class="fu">Csnippet</span>(<span class="st">&quot;</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a><span class="st">  double mean, sd;</span></span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="st">  double length;</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a><span class="st">  mean = rho*H;</span></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="st">  sd = H;</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a><span class="st">  length = rnorm(1,mean,sd);</span></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a><span class="st">  reports = rnbinom_mu(k,rho*H);</span></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span>)</span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a><span class="co"># add components to pomp model: clarify E and mu_EI</span></span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>meas <span class="sc">|&gt;</span></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pomp</span>(<span class="at">times=</span><span class="st">&quot;week&quot;</span>,<span class="at">t0=</span><span class="dv">0</span>,</span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">rprocess=</span><span class="fu">euler</span>(seir_step,<span class="at">delta.t=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>    <span class="at">rinit=</span>seir_rinit,</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmeasure=</span>seir_rmeas,</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>    <span class="at">dmeasure=</span>seir_dmeas,</span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>    <span class="at">accumvars=</span><span class="st">&quot;H&quot;</span>,</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>    <span class="at">statenames=</span><span class="fu">c</span>(<span class="st">&quot;S&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;R&quot;</span>,<span class="st">&quot;H&quot;</span>),</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>    <span class="at">paramnames=</span><span class="fu">c</span>(<span class="st">&quot;Beta&quot;</span>,<span class="st">&quot;mu_EI&quot;</span>,<span class="st">&quot;mu_IR&quot;</span>,<span class="st">&quot;N&quot;</span>,<span class="st">&quot;eta&quot;</span>,<span class="st">&quot;rho&quot;</span>,<span class="st">&quot;k&quot;</span>)</span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>  ) <span class="ot">-&gt;</span> measSEIR</span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 5</span></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>B. If $h$ is an indentity map, then $W_n = h(V_n) = V_n$ is a Markov process. If $h$ is a function such that $h(V_n)  = V_n + V_{2n}$. Then $W_n = h(V_n) = V_n + V_{2n}$, $W_{n-1} = h(V_{n-1}) = V_{n-1} + V_{2n-2}$. Then $W_n$ is not Markov process. Thus ii is correct. Since $(X_n, Y_n)$ is a POMP model, $X_n$ is the latent process. Thus $W_n = h(V_n) = X_n$ is Markov Process. Thus iv is correct.</span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 6</span></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>C. For one core:</span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>10 \times 10^3 = 10^4 = 15 \text{min}</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>Then:</span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>20 \times 10^4 = 2 \times 10^5 = 20\times 15\text{min} = 300 \text{min}</span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>Equally distributed on 4 cores:</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>300\text{min} /4 = 75 \text{min}</span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 7</span></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>E. In this question I referred to <span class="co">[</span><span class="ot">previous solutions</span><span class="co">](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf)</span> on how to compute exact std using codes. We know from <span class="co">[</span><span class="ot">pomp likelihood estimation</span><span class="co">](https://kingaa.github.io/sbied/pfilter/slides.pdf)</span> that the particle filter can calculate the unbiased likelihood estimate on a natural scale but not on a log scale from the slides. Thus by the codes below:</span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a>es <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2446</span>, <span class="sc">-</span><span class="dv">2444</span>, <span class="sc">-</span><span class="dv">2443</span>, <span class="sc">-</span><span class="dv">2442</span>, <span class="sc">-</span><span class="dv">2440</span>)</span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pomp)</span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a><span class="fu">logmeanexp</span>(es, <span class="at">se =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a>E is correct.</span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 8</span></span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>A. For this question, use the codes below to read the estimates of loglikelihood and do the same operation as Question 7 using <span class="in">`logmeanexp`</span> in <span class="in">`pomp`</span> package:</span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>Q9 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;~/Library/Mobile Documents/com~apple~CloudDocs/531/Stats531/hw08/Q9.rds&quot;</span>)</span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a><span class="fu">logmeanexp</span>(Q9)</span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>Thus A is correct.</span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 9</span></span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>D. According to <span class="co">[</span><span class="ot">likelihood based inference for POMP</span><span class="co">](https://kingaa.github.io/sbied/pfilter/slides.pdf)</span>, if the effective sample size is too small, then the measurement information might be not enough for filtering out the noise in some time slots. This will cause the estimation on several time slots to be not convincing and thus ruin the whole particle filtering algorithm since it&#39;s sequential. Thus C is likely to happen. We should choose D.</span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 10</span></span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>C. If the likelihood increases steadily, then it&#39;s the sign that the estimation algorithm keeps changing the parameters to get better estimation. This means that the estimation keeps improving until a convergence and it still does not make fully use of the data and &quot;dig out&quot; the information in it. This might imply that we misspecified the model and do not fit the data adequately. Thus C is correct.</span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 11</span></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a>B. According to the <span class="co">[</span><span class="ot">profile likelihood</span><span class="co">](https://kingaa.github.io/sbied/mif/slides.pdf)</span>, we can apply Wilk&#39;s Theorem only if the likelihood is profile, i.e., is the maximization of all the other parameters given one parameter. Thus if the code only involves evaluation of the likelihood but not maximization then it should be wrong.</span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 12</span></span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>A: True. Because the profile likelihood is the maximization over every slice.</span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>B: False. Because CI should be read from profile likelihood not slices according to Wilk&#39;s Theorem. (Only if we only have 1 parameter thus maximizing on the remaining parameters is just the likelihood itself, B can be True)</span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>C: False.</span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>D: True. Because the poor man&#39;s profile is just the &quot;practical&quot; true profile which we can compute using our parameter estimation. It should lie below the true profile.</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 13</span></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a>A. From the plots we can see the likelihood is climbing and all iterations and replicated searches are producing. We can also find that the $\sigma_{\nu}$ and $H_0$ do dot converge, which indicates weak identifability.</span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 14</span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a>E. For this question I referred to the <span class="co">[</span><span class="ot">previous solutions</span><span class="co">](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf)</span>. I think B makes sense since the loglik spread too widely thus we need to increase particles and iterations to achieve better and more stable searching results. For C and D, cite from <span class="co">[</span><span class="ot">previous solutions</span><span class="co">](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf)</span>:</span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a>*However, if the model fit is not great (as revealed by comparison against a benchmark) this makes the filtering harder as well as less scientifically satisfactory. If the model is fitting substantially below ARMA benchmarks, it is worth considering some extra time on model development. Identifying time points with low effective sample size can help to identify which parts of the data are problemtic for the model to explain.*.</span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>**(For Question 15 and 16, I finished independently.)**</span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 15</span></span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a>A: False. <span class="in">`Nmif = 100`</span>.</span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a>B: True. <span class="in">`partrans`</span> transfer &quot;Beta&quot; and &quot;alpha&quot; to log scale.</span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a>C: False. <span class="in">`rw.sd`</span> defines &quot;gamma&quot; as the standard deviation of a random walk.</span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a>D: True. &quot;delta&quot; will remain fixed since only &quot;Beta&quot;, &quot;alpha&quot;, &quot;gamma&quot; appears in `rw.sd``.</span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a>E: False.</span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a>F: True. Since the cooling fraction should be 0.1 every 50 Nmif but not every 1 Nmif.</span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a>H: True.</span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question 16</span></span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>**Answer**:</span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a>A: True, <span class="in">`Nmif = 100`</span> will be preserved and be default.</span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a>B: True, we only re-define <span class="in">`rw.sd`</span> and <span class="in">`cooling.fraction.50`</span>, thus all the other codes will be re-used.</span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a>C: True. The new interations will be continued at the end of the old ones.</span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a>D: True. Preserved in Question 15.</span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>E: True. Because &quot;gamma&quot; is not defined in the new <span class="in">`rw.sd`</span>.</span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a>F: True. Preserved in Question 15.</span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a>G: False. Since $0.2^{100/50} = 0.04 &gt; 0.01 = 0.1^{100/50}$.</span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a>****</span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a><span class="fu"># Referene</span></span>
+<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1. <span class="co">[</span><span class="ot">pomp theory</span><span class="co">](https://ionides.github.io/531w24/10/slides.pdf)</span></span>
+<span id="cb14-374"><a href="#cb14-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2. <span class="co">[</span><span class="ot">previous solutions</span><span class="co">](https://github.com/LiangqiTang/Stats-531/blob/main/sol08.pdf)</span></span>
+<span id="cb14-375"><a href="#cb14-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>3. <span class="co">[</span><span class="ot">pomp likelihood estimation</span><span class="co">](https://kingaa.github.io/sbied/pfilter/slides.pdf)</span></span>
+<span id="cb14-376"><a href="#cb14-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>4. <span class="co">[</span><span class="ot">likelihood based inference for POMP</span><span class="co">](https://kingaa.github.io/sbied/pfilter/slides.pdf)</span></span>
+<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>5. <span class="co">[</span><span class="ot">profile likelihood</span><span class="co">](https://kingaa.github.io/sbied/mif/slides.pdf)</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
