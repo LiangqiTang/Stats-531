@@ -57,6 +57,8 @@ The course outline, course information and grading policies are described in the
 
 17. [A case study of measles: Dynamics revealed in long time series](17/index.html)
 
+18. [A case study of ebola: Model criticism and forecasting](18/index.html)
+
 <!--
 
 There are further POMP case studies, in a similar style, on [Ebola modeling](https://kingaa.github.io/sbied/ebola/index.html), [measles transmission](https://kingaa.github.io/sbied/measles/index.html), and [dynamic variation in the rate of human sexual contacts](https://kingaa.github.io/sbied/contacts/index.html).
@@ -106,22 +108,14 @@ Please read the [grading rubric](rubric_homework.html) before submitting homewor
 * [Participation 6](participation/participation6.html), due Sun Mar 24, 11:59pm.
 
 * [Homework 7](hw07/hw07.html), due Sun Mar 31, 11:59pm. Extended to Wed Apr 3.
-
-<!--
-
 [Solution](hw07/sol07.html).
-
--->
 
 
 * [Participation 7](participation/participation7.html), due Sun Mar 31, 11:59pm. Extended to Wed Apr 3.
 
 
 * [Homework 8](hw08/hw08.pdf), due Sun Apr 14, 11:59pm.
-
-<!--
 [Solution](hw08/sol08.pdf).
--->
 
 * [Participation 8](participation/participation8.html), due Sun Apr 14, 11:59pm.
 
